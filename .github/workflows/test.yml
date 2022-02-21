@@ -25,4 +25,4 @@ jobs:
           project-number: 1
           content-id: "I_kwDOG4a9ps5ESnuj"
       - name: output
-        run: echo ${{ steps.add-issue-to-projects-beta.outputs }}
+        run: echo "${{ steps.add-issue-to-projects-beta.outputs.added-item-id }}"
