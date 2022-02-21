@@ -1,0 +1,22 @@
+name: "Add projects beta"
+author: "sunadoi"
+description: "add issues or PRs to GitHub Projects(Beta)"
+branding:
+  icon: "database"
+  color: "orange"
+inputs:
+  github-token:
+    required: true
+    description: "personal access token that contains `repo` and `org:read` is required."
+  project-number:
+    required: true
+    description: "The number of the target projects beta"
+  item-id:
+    required: true
+    description: "Node id of issue or PR"
+outputs:
+  added-item-id:
+    description: "project item id added to the project"
+runs:
+  using: "node16"
+  main: "index.js"
