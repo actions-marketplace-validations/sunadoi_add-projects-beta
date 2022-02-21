@@ -1244,11 +1244,11 @@ var require_core = __commonJS({
 Support boolean input list: \`true | True | TRUE | false | False | FALSE\``);
     }
     exports.getBooleanInput = getBooleanInput;
-    function setOutput(name, value) {
+    function setOutput2(name, value) {
       process.stdout.write(os.EOL);
       command_1.issueCommand("set-output", { name }, value);
     }
-    exports.setOutput = setOutput;
+    exports.setOutput = setOutput2;
     function setCommandEcho(enabled) {
       command_1.issue("echo", enabled ? "on" : "off");
     }
@@ -4986,7 +4986,8 @@ var main = async () => {
   const projectNodeId = await getProjectId();
   if (!projectNodeId)
     throw new Error(`no project node id`);
-  return await addProjects(projectNodeId);
+  const result = await addProjects(projectNodeId);
+  (0, import_core3.setOutput)("added-item-id", result);
 };
 main();
 module.exports = __toCommonJS(src_exports);
