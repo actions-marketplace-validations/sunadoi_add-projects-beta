@@ -1,0 +1,13 @@
+{
+  "name": "add-projects-beta",
+  "version": "1.0.0",
+  "description": "add issues or PRs to GitHub Projects(Beta)",
+  "main": "index.js",
+  "repository": "git@github.com:sunadoi/add-projects-beta.git",
+  "author": "sunadoi <y.sunadoi@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0"
+  }
+}
