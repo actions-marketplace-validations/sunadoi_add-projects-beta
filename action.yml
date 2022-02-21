@@ -22,4 +22,4 @@ outputs:
     description: "project item id added to the project"
 runs:
   using: "node16"
-  main: "index.js"
+  main: "src/index.js"

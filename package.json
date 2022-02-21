@@ -7,7 +7,7 @@
   "author": "sunadoi <y.sunadoi@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "rm index.js && esbuild --bundle --platform=node --allow-overwrite --outfile=index.js --target=node16 index.ts"
+    "build": "rm src/index.js && esbuild --bundle --platform=node --allow-overwrite --outfile=src/index.js --target=node16 src/index.ts"
   },
   "dependencies": {
     "@actions/core": "^1.6.0",

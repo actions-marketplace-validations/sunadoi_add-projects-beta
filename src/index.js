@@ -4905,15 +4905,15 @@ var require_dist_node6 = __commonJS({
   }
 });
 
-// index.ts
-var add_projects_beta_exports = {};
-__export(add_projects_beta_exports, {
+// src/index.ts
+var src_exports = {};
+__export(src_exports, {
   graphqlWithAuth: () => graphqlWithAuth
 });
 var import_core3 = __toESM(require_core());
 var import_graphql3 = __toESM(require_dist_node6());
 
-// getProjectId.ts
+// src/getProjectId.ts
 var import_core = __toESM(require_core());
 var import_graphql = __toESM(require_dist_node6());
 var getProjectId = async () => {
@@ -4948,7 +4948,7 @@ var getProjectId = async () => {
   }
 };
 
-// addProjects.ts
+// src/addProjects.ts
 var import_core2 = __toESM(require_core());
 var import_graphql2 = __toESM(require_dist_node6());
 var addProjects = async (projectNodeId) => {
@@ -4976,7 +4976,7 @@ var addProjects = async (projectNodeId) => {
   }
 };
 
-// index.ts
+// src/index.ts
 var graphqlWithAuth = import_graphql3.graphql.defaults({
   headers: {
     authorization: `token ${(0, import_core3.getInput)("github-token")}`
@@ -4989,7 +4989,7 @@ var main = async () => {
   return await addProjects(projectNodeId);
 };
 main();
-module.exports = __toCommonJS(add_projects_beta_exports);
+module.exports = __toCommonJS(src_exports);
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   graphqlWithAuth
