@@ -31,7 +31,7 @@ const main = async () => {
   try {
     const queryResult: GraphQlQueryResponseData = await graphqlWithAuth(query, {
       login: core.getInput("project-owner"),
-      projectNumber: core.getInput("project-number"),
+      projectNumber: Number(core.getInput("project-number")),
     });
 
     const projectNodeId =
@@ -50,8 +50,8 @@ const main = async () => {
       }
     );
     return mutationResult?.addProjectNextItem?.projectNextItem?.id || "";
-  } catch (error) {
-    console.error(error.message);
+  } catch (error: unknown) {
+    if (error instanceof Error) console.error(error.message);
     return;
   }
 };
