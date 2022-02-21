@@ -7,10 +7,13 @@
   "author": "sunadoi <y.sunadoi@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "build": "rm index.js && esbuild --bundle --platform=node --allow-overwrite --outfile=index.js --target=node16 index.ts"
   },
   "dependencies": {
     "@actions/core": "^1.6.0",
     "@octokit/graphql": "^4.8.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.23"
   }
 }
