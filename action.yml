@@ -8,10 +8,13 @@ inputs:
   github-token:
     required: true
     description: "personal access token that contains `repo` and `org:read` is required."
+  project-owner:
+    required: true
+    description: "User or Organization name of projects beta"
   project-number:
     required: true
     description: "The number of the target projects beta"
-  item-id:
+  content-id:
     required: true
     description: "Node id of issue or PR"
 outputs:
