@@ -29,10 +29,10 @@ Project item id added to the project.
 
 ## Example Usage
 ```
-uses: sunadoi/add-projects-beta@v1
-with:
-  github-token: ${{ secrets.ADD_PROJECTS_BETA }}
-  project-owner: "foo"
-  project-number: 1
-  content-id: ${{ github.event.issue.node_id }}
+- uses: sunadoi/add-projects-beta@v1
+  with:
+    github-token: ${{ secrets.ADD_PROJECTS_BETA }}
+    project-owner: "foo"
+    project-number: 1
+    content-id: ${{ github.event.issue.node_id }}
 ```
