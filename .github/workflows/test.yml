@@ -16,6 +16,8 @@ jobs:
           key: node_modules-${{ hashFiles('**/package.json', 'yarn.lock') }}
       - run: yarn install --frozen-lockfile
         if: steps.cache_node_modules.outputs.cache-hit != 'true'
+      - run: yarn tsc --noEmit
+      - run: yarn build
       - name: Add issue to project
         id: add-issue-to-projects-beta
         uses: ./
