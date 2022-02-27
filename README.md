@@ -7,7 +7,7 @@ This action adds issue or PR to GitHub Projects(Beta).
 ## Inputs
 All inputs are required.
 ### `github-token`
-Personal access token that contains `repo` and `org:write` is required.
+Personal access token that contains `repo` and `write:org` is required.
 For security reasons, it is recommended to set the token to GitHub secrets.
 
 ### `project-owner`
