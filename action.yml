@@ -7,7 +7,7 @@ branding:
 inputs:
   github-token:
     required: true
-    description: "Personal access token that contains `repo` and `org:read` is required."
+    description: "Personal access token that contains `repo` and `write:org` is required."
   project-owner:
     required: true
     description: "User or Organization name of projects beta"
